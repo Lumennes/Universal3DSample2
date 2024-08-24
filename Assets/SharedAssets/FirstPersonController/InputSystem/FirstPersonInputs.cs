@@ -110,15 +110,18 @@ namespace StarterAssets
 
 		public void OnSwitchQuality(InputValue value)
 		{
-
 			SwitchQuality(value.isPressed);
         }
 #endif
         public void SwitchQuality(bool newSwitchQualityState)
 		{
-            Debug.Log("OnSwitchQuality(): " + newSwitchQualityState);
-            //if (CameraManager != null)
-            //if ()
+			// если клавиша/кнопка отжата не срабатывает
+			if (!newSwitchQualityState)
+				return;
+			//если количеств качеств менее 2 как в webgl не меняем
+			if (QualitySettings.count < 2)
+				return;          
+			// переключаем качества то низкое то выское
             QualitySettings.SetQualityLevel(
                 QualitySettings.GetQualityLevel() == 0 ? 1 : 0);
         }

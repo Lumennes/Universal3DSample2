@@ -49,10 +49,10 @@ jobs:
           # - test-project
         unityVersion:
           - 2022.3.42f1
-          - 2022.3.43f1
-          #- 2022.3.43f1
-          # - 2022.3.13f1
-          # - 2023.2.2f1
+          # - 2022.3.41f1
+          # - 2022.3.40f1
+          # - 2022.3.39f1
+          # - 2022.3.38f1
         targetPlatform:
           # - StandaloneOSX # Build a macOS standalone (Intel 64-bit) with mono backend.
           - StandaloneWindows64 # Build a Windows 64-bit standalone with mono backend.
@@ -97,9 +97,9 @@ jobs:
 
     steps:      
 
-      # - name: Clear Space for Android Build
-        # if: matrix.targetPlatform == 'Android'
-        # uses: jlumbroso/free-disk-space@v1.3.1
+      - name: Clear Space for Android Build
+        if: matrix.targetPlatform == 'Android'
+        uses: jlumbroso/free-disk-space@v1.3.1
 
       ###########################
       #         Checkout        #
@@ -190,7 +190,7 @@ jobs:
           buildMethod: UnityBuilderAction.BuildScript.Build
           # customParameters: -profile SomeProfile -someBoolean -someValue exampleValue ${{ matrix.additionalParameters }}
           # providerStrategy: ${{ matrix.providerStrategy }}
-          # allowDirtyBuild: true
+          allowDirtyBuild: true
 
       ###########################
       #          Upload         #
