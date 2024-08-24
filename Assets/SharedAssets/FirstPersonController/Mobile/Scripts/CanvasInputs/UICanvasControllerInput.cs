@@ -35,11 +35,20 @@ namespace StarterAssets
             starterAssetsInputs.JumpInput(virtualJumpState);
         }
 
+
+
         public void VirtualSprintInput(bool virtualSprintState)
         {
             starterAssetsInputs.SprintInput(virtualSprintState);
         }
-        
+
+        public void VirtualSwitchQualityInput(bool virtualSwitchQualityState)
+        {
+            if(virtualSwitchQualityState)
+                starterAssetsInputs.SwitchQuality(virtualSwitchQualityState);
+        }
+
+
     }
 
 }

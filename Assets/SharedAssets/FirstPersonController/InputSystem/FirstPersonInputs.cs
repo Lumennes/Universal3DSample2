@@ -107,10 +107,23 @@ namespace StarterAssets
 			}
 			SprintInput(value.isPressed);
 		}
+
+		public void OnSwitchQuality(InputValue value)
+		{
+
+			SwitchQuality(value.isPressed);
+        }
 #endif
+        public void SwitchQuality(bool newSwitchQualityState)
+		{
+            Debug.Log("OnSwitchQuality(): " + newSwitchQualityState);
+            //if (CameraManager != null)
+            //if ()
+            QualitySettings.SetQualityLevel(
+                QualitySettings.GetQualityLevel() == 0 ? 1 : 0);
+        }
 
-
-		public void MoveInput(Vector2 newMoveDirection)
+        public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
 		} 
