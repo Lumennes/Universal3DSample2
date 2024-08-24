@@ -139,7 +139,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           buildName: ${{ env.PROJECT_NAME }}
-          projectPath: ${{ matrix.projectPath }}
+          # projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
           # customParameters: -profile SomeProfile -someBoolean -someValue exampleValue ${{ matrix.additionalParameters }}
@@ -161,7 +161,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           buildName: ${{ env.PROJECT_NAME }}
-          projectPath: ${{ matrix.projectPath }}
+          # projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
           # customParameters: -profile SomeProfile -someBoolean -someValue exampleValue ${{ matrix.additionalParameters }}
@@ -182,7 +182,7 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           buildName: ${{ env.PROJECT_NAME }}
-          projectPath: ${{ matrix.projectPath }}
+          # projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
           # customParameters: -profile SomeProfile -someBoolean -someValue exampleValue ${{ matrix.additionalParameters }}
